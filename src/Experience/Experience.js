@@ -43,7 +43,7 @@ export default class Experience
         this.setCamera()
         this.setRenderer()
         this.setResources()
-        this.setMicrohopne()
+        this.setMicrophone()
         this.setWorld()
         
         this.sizes.on('resize', () =>
@@ -109,7 +109,7 @@ export default class Experience
         this.resources = new Resources(assets)
     }
 
-    setMicrohopne()
+    setMicrophone()
     {
         this.microphone = new Microphone()
     }

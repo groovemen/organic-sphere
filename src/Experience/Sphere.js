@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import Experience from './Experience'
+import Experience from './Experience.js'
 import vertexShader from './shaders/sphere/vertex.glsl'
 import fragmentShader from './shaders/sphere/fragment.glsl'
 
@@ -125,13 +125,13 @@ export default class Sphere
         // Light A
         this.lights.a = {}
 
-        this.lights.a.intensity = 1.85
+        this.lights.a.intensity = 1
 
         this.lights.a.color = {}
-        this.lights.a.color.value = '#ff3e00'
+        this.lights.a.color.value = '#FFEE7C'
         this.lights.a.color.instance = new THREE.Color(this.lights.a.color.value)
 
-        this.lights.a.spherical = new THREE.Spherical(1, 0.615, 2.049)
+        this.lights.a.spherical = new THREE.Spherical(1, 0.615, -2.049)
 
         // Light B
         this.lights.b = {}
@@ -139,10 +139,10 @@ export default class Sphere
         this.lights.b.intensity = 1.4
 
         this.lights.b.color = {}
-        this.lights.b.color.value = '#0063ff'
+        this.lights.b.color.value = '#4d4426'
         this.lights.b.color.instance = new THREE.Color(this.lights.b.color.value)
 
-        this.lights.b.spherical = new THREE.Spherical(1, 2.561, - 1.844)
+        this.lights.b.spherical = new THREE.Spherical(1, 2.561, 1.844)
 
         // Debug
         if(this.debug)
@@ -235,7 +235,7 @@ export default class Sphere
                 uOffset: { value: new THREE.Vector3() },
 
                 uDistortionFrequency: { value: 1.5 },
-                uDistortionStrength: { value: 0.65 },
+                uDistortionStrength: { value: 1 },
                 uDisplacementFrequency: { value: 2.120 },
                 uDisplacementStrength: { value: 0.152 },
 
