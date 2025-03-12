@@ -88,11 +88,11 @@ export default class Renderer
         this.postProcess.unrealBloomPass.enabled = true
 
         this.postProcess.unrealBloomPass.tintColor = {}
-        this.postProcess.unrealBloomPass.tintColor.value = '#E7F0FE'
+        this.postProcess.unrealBloomPass.tintColor.value = '#FEE607'
         this.postProcess.unrealBloomPass.tintColor.instance = new THREE.Color(this.postProcess.unrealBloomPass.tintColor.value)
         
         this.postProcess.unrealBloomPass.compositeMaterial.uniforms.uTintColor = { value: this.postProcess.unrealBloomPass.tintColor.instance }
-        this.postProcess.unrealBloomPass.compositeMaterial.uniforms.uTintStrength = { value: 0 }
+        this.postProcess.unrealBloomPass.compositeMaterial.uniforms.uTintStrength = { value: .9 }
         this.postProcess.unrealBloomPass.compositeMaterial.fragmentShader = `
 varying vec2 vUv;
 uniform sampler2D blurTexture1;
